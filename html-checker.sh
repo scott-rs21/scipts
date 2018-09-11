@@ -1,4 +1,7 @@
 #!/bin/bash
+# Settings to make bash more strict in handling errors and splitting strings
+set -euo pipefail
+IFS=$'\n\t'
 
 tarball=$1
 
