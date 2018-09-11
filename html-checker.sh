@@ -10,6 +10,10 @@ if [ "$tarball" == "" ] || [ ! -s $tarball ]; then
   exit 1
 fi
 
+if [ -d source ]; then
+  rm -rf source
+fi
+
 mkdir source
 cd source
 tar fxvz ../$tarball
